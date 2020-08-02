@@ -1,4 +1,4 @@
-# vue-docked
+# Vue.js App in Docker
 
 ## Project setup
 ```
@@ -20,5 +20,17 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Build Docker image
+```
+docker build -t vue/demo:latest .
+```
+
+### Run Docker image
+```
+docker run -d --name vue-demo -p 8000:80 vue/demo
+```
+
+### Test
+```
+curl localhost:8000
+```
